@@ -207,7 +207,7 @@
         setMetaTag('name', 'language', 'id-ID');
         setMetaTag('name', 'theme-color', '#ffffff');
 
-        setMetaTag('property', 'og:locale', 'id_ID');
+        setMetaTag('property', 'og:locale', 'en_US');
         setMetaTag('property', 'og:type', type);
         setMetaTag('property', 'og:site_name', CONFIG.SITE_NAME);
         setMetaTag('property', 'og:title', finalTitle);
