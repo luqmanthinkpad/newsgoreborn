@@ -72,16 +72,16 @@ const fillDetailAds = () => {
     // };
 	
 // --- Histats Tracking Code ---
-const initHistats = () => {
-    window._Hasync = window._Hasync || [];
-    window._Hasync.push(['Histats.start', '1,4923600,4,0,0,0,00010000']);
-    window._Hasync.push(['Histats.fasi', '1']);
-    window._Hasync.push(['Histats.track_hits', '']);
-    (function() {
-        var hs = document.createElement('script'); 
-        hs.type = 'text/javascript'; 
-        hs.async = true;
-        hs.src = ('//s10.histats.com/js15_as.js');
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-    })();
-};
+// const initHistats = () => {
+// window._Hasync = window._Hasync || [];
+    // window._Hasync.push(['Histats.start', '1,4923600,4,0,0,0,00010000']);
+    // window._Hasync.push(['Histats.fasi', '1']);
+    // window._Hasync.push(['Histats.track_hits', '']);
+    // (function() {
+        // var hs = document.createElement('script'); 
+        // hs.type = 'text/javascript'; 
+        // hs.async = true;
+        // hs.src = ('//s10.histats.com/js15_as.js');
+        // (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+    // })();
+// };
