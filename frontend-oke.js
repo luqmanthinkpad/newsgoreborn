@@ -99,12 +99,7 @@
                     </div>
                 </footer>
             </div>
-            <div id="popup-ads-container" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center;">
-				<div class="popup-content" style="position:relative; background:#fff; padding:10px; border-radius:8px; width:320px; min-height:270px; display:flex; flex-direction:column; align-items:center;">
-					<button onclick="document.getElementById('popup-ads-container').style.display='none'" style="position:absolute; top:-15px; right:-15px; background:#000; color:#fff; border-radius:50%; width:30px; height:30px; border:2px solid #fff; cursor:pointer; font-size:18px; line-height:1;">&times;</button>
-					<div id="ads-placeholder" style="width:300px; height:250px; overflow:hidden;"></div>
-				</div>
-			</div>
+
     `;
 
 	const injectSchema = (data) => {
@@ -201,15 +196,15 @@
         setMetaTag('name', 'title', finalTitle);
         setMetaTag('name', 'description', finalDescription);
         setMetaTag('name', 'keywords', finalKeywords);
-        setMetaTag('name', 'robots', 'index, follow, max-image-preview:large');
-        setMetaTag('name', 'googlebot', 'index, follow, max-image-preview:large');
-        setMetaTag('name', 'author', CONFIG.SITE_NAME);
-        setMetaTag('name', 'language', 'id-ID');
-        setMetaTag('name', 'theme-color', '#ffffff');
+        setMetaTag('name', 'robots', 'index, follow');
+        setMetaTag('name', 'googlebot', 'index, follow');
+     
+        setMetaTag('name', 'language', 'en-US');
+
 
         setMetaTag('property', 'og:locale', 'en_US');
         setMetaTag('property', 'og:type', type);
-        setMetaTag('property', 'og:site_name', CONFIG.SITE_NAME);
+   
         setMetaTag('property', 'og:title', finalTitle);
         setMetaTag('property', 'og:description', finalDescription);
         setMetaTag('property', 'og:url', finalUrl);
@@ -500,13 +495,7 @@
 				</div>`;
 		}
 	};
-    const injectMetaLinks = () => {
-        if (!document.querySelector('link[rel="sitemap"]')) {
-            const s = document.createElement('link'); s.rel = 'sitemap'; s.type = 'application/xml'; s.href = `${CONFIG.DOMAIN}/?page=sitemap`;
-            document.head.appendChild(s);
-        }
-    };
-
+    
     injectMetaLinks();
     
     if (pageParam === 'sitemap') await renderRawXml('sitemap');
